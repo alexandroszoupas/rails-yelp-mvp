@@ -3,5 +3,5 @@ class Restaurant < ApplicationRecord
   CATEGORY = %W( chinese italian japanese french belgian )
   validates :name, presence: true
   validates :address, presence: true
-  validates :category, inclusion: { in: CATEGORY }
+  validates :category, inclusion: { in: CATEGORY }, presence: true
 end

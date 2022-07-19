@@ -15,11 +15,11 @@ puts 'destroyed everything'
 puts 'creating some restaurants'
 
 10.times do
-  restaurant = Restaurant.create(
+  restaurant = Restaurant.create!(
     name: Faker::DcComics.hero,
     address: Faker::Address.street_name,
     phone_number: Faker::PhoneNumber,
-    category: ["chinese", "italian", "japanese", "french", "belgian"]
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample
   )
   puts "restaurant #{restaurant.name} has been created"
 end
