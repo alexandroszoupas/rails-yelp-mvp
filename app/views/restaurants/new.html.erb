@@ -2,6 +2,6 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: Restaurant::CATEGORY%>
   <%= f.submit "Create this restaurant", class: "btn btn-primary" %>
 <% end %>

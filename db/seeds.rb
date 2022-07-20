@@ -18,7 +18,7 @@ puts 'creating some restaurants'
   restaurant = Restaurant.create!(
     name: Faker::DcComics.hero,
     address: Faker::Address.street_name,
-    phone_number: Faker::PhoneNumber,
+    phone_number: Faker::PhoneNumber.phone_number,
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample
   )
   puts "restaurant #{restaurant.name} has been created"
